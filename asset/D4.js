@@ -120,10 +120,22 @@ console.log(upperFirst("ciao mondo come va tutto bene"));
  della stringa originale.
 */
 
-function cutString() {}
+function cutString(string) {
+  return string.slice(1, -1);
+}
+console.log(cutString("ciao come stai tutto bene"));
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function giveMeRandom(n) {
+  let randomNumber = [];
+
+  for (i = 0; i < n; i++) {
+    let randomNum = Math.floor(Math.random() * 11);
+    randomNumber.push(randomNum);
+  }
+  return randomNumber;
+}
+console.log(giveMeRandom(20));
